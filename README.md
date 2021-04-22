@@ -1,6 +1,7 @@
 
 [![Release CI](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/release.yml/badge.svg)](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/release.yml)
 
+
 # bal_paranthesis
 
 To check if an expression is correctly parenthesized use a stack implemented by an array.  
