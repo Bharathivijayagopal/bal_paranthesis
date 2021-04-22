@@ -1,0 +1,38 @@
+name: Build CI
+
+on:
+  push:
+    branches:
+    - develop
+  pull_request:
+    branches:
+    - develop
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install GCC
+      run: sudo apt-get install build-essential
+
+    - name: Build
+      run: make all
+
+    - name: Test
+      run: make check
+
+    - name: Run The Program
+      run: make EXP='\(\(\(2\)+3\)\)' run
+
+    - name: Upload The Program
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        name: program
+        path: |
+          build/main
+          build/stack_test
+          build/expression_test
