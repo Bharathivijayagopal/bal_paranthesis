@@ -1,6 +1,4 @@
-
-[![Release CI](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/release.yml/badge.svg)](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/release.yml)
-
+[![Build CI](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/build.yml/badge.svg)](https://github.com/Bharathivijayagopal/bal_paranthesis/actions/workflows/build.yml)
 
 # bal_paranthesis
 
