@@ -11,6 +11,16 @@ void stack_clear(void)
 bool stack_push(char ch)
 {
     bool status = false;
+    if (top < STACK_SIZE)
+    {
+        top++;
+        stack[top] = ch;
+        status = true;
+    }
+    else
+    {
+        status = false;
+    }
 
     return status;
 }
@@ -18,6 +28,7 @@ bool stack_push(char ch)
 char stack_pop(void)
 {
     char ch = '\0';
-
+    top--;
+    stack[top] = ch;
     return ch;
 }
