@@ -13,7 +13,7 @@ bool expression_check(const char *exp)
         }
         else if (exp[i] == ')')
         {
-            char ch = stack_pop();
+            ch = stack_pop();
         }
     }
     char final = stack_pop();
