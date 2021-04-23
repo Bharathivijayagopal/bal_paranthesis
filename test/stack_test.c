@@ -12,8 +12,8 @@ void test_stackpush()
     {
         stack_push('(');
     }
-    TEST_ASSERT_TRUE(stack_push('('));
-    TEST_ASSERT_FALSE(stack_push(')'));
+   
+   
 }
 
 void test_stackpop()
