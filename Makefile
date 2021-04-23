@@ -59,6 +59,9 @@ $(BUILD_DIR)/%.o : $(SRC_DIR)/*/%.c
 	$(CC) -MMD $(CFLAGS) -o $@ $(INCLUDES) -c $<
 
 run: .mkbuild $(PROG_EXE)
+
+run1: .mkbuild $(TEST_EXE_2)
+
 	@echo ""
 	@echo "**************************************"
 	@echo "********* Run The Program ************"
