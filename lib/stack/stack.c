@@ -25,7 +25,7 @@ bool stack_push(char ch)
     return status;
 }
 
-char stack_pop(void)
+char stack_pop()
 {
     char ch = '\0';
     top--;
