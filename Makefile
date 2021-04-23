@@ -17,7 +17,7 @@ INCLUDES := $(addprefix -I./,$(wildcard $(LIB_DIR)/*) ./$(SRC_DIR)/expression)
 TEST_OBJS_1 := $(notdir $(wildcard $(LIB_DIR)/*/*.c) ./$(TEST_DIR)/$(TEST_EXE_1).c )
 TEST_OBJS_1 := $(addprefix $(BUILD_DIR)/,$(TEST_OBJS_1:.c=.o))
 
-TEST_OBJS_2 := $(notdir $(wildcard $(LIB_DIR)/*/*.c) ./$(TEST_DIR)/$(TEST_EXE_2).c )
+TEST_OBJS_2 := $(notdir $(wildcard $(LIB_DIR)/*/*.c) $(wildcard $(SRC_DIR)/*/*.c) ./$(TEST_DIR)/$(TEST_EXE_2).c )
 TEST_OBJS_2 := $(addprefix $(BUILD_DIR)/,$(TEST_OBJS_2:.c=.o))
 
 PROG_OBJS := $(notdir $(wildcard $(LIB_DIR)/stack/*.c) $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*/*.c))
