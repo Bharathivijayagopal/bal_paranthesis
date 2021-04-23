@@ -13,8 +13,8 @@ bool stack_push(char ch)
     bool status = false;
     if (top < STACK_SIZE)
     {
-        top++;
         stack[top] = ch;
+        top++;
         status = true;
     }
     else

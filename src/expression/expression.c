@@ -4,6 +4,7 @@
 bool expression_check(const char *exp)
 {
     bool status = false;
+    char ch;
     for (int i = 0; i < exp[i] != '\0'; i++)
     {
         if (exp[i] == '(')
@@ -13,14 +14,15 @@ bool expression_check(const char *exp)
         else if (exp[i] == ')')
         {
             char ch = stack_pop();
-            if (ch == '\0')
-            {
-                status = true;
-            }
-            else
-                status = false;
         }
     }
+    char final = stack_pop();
+    if (final == '\0')
+    {
+        status = true;
+    }
+    else
+        status = false;
 
     return status;
 }
